@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 import useAuthServices from "../services/useAuthServices";
 const PrivateRouter = () => {
   const { token, checkLoopTime } = useSelector((state) => state.auth);
-  const { currentApi } = useAuthServices();
-  console.log("token private router= ", token);
+  const { currentApi } = useAuthServices(); 
 
   const now = new Date().getTime();
   const fifteenMinutesAgo = new Date(now - 10 * 60 * 1000).getTime();
@@ -21,14 +20,12 @@ const PrivateRouter = () => {
   // );
 
   useEffect(() => {
-    if (fifteenMinutesAgo >= checkLoopTime) {
-      console.log('cuurrent api bastqa calisti..');
+    if (fifteenMinutesAgo >= checkLoopTime) { 
       currentApi(now);
-    }
+    }// eslint-disable-next-line
   }, [fifteenMinutesAgo >= checkLoopTime]);
   console.log("------------------------------------------------");
-
-  const isLoginned = false;
+ 
   return token ? <Outlet /> : <Navigate to="/login" />;
 };
 

@@ -54,7 +54,7 @@ export default function ProductForm({ open, setOpen, editItem, setEditItem }) {
   useEffect(() => {
     if (editItem?.title) {
       setInputs({
-        categoryId: editItem?.categoryId._id,
+        categoryId: editItem?.categoryId?._id || "Select a category",
         title: editItem?.title,
         description: editItem?.description,
         price: editItem?.price,

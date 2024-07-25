@@ -38,6 +38,7 @@ const productSlice = createSlice({
         fetchLogoutProduct : (state,{payload})=>{
             state.products = [];
             state.details = {};
+            state.oneProduct = {};
         },
     }
 })

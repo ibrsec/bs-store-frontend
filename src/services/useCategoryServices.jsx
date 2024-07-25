@@ -1,18 +1,15 @@
 
 
-
-import React from 'react'
+ 
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import useAxios from './useAxios';
-import { fetchStartCategory,fetchFailCategory,fetchSuccessCategory,fetchSuccessWithoutPayloadCategory,fetchLogoutCategory} from '../app/features/categorySlice';
+import { fetchStartCategory,fetchFailCategory,fetchSuccessCategory,fetchSuccessWithoutPayloadCategory,} from '../app/features/categorySlice';
 import { toastError, toastSuccess } from '../helpers/toastify';
 
 const useCategoryServices = () => {
 
     const dispatch = useDispatch();
-    const navigate = useNavigate();
-    const {axiosPublic,axiosToken} = useAxios();
+    const {axiosToken} = useAxios();
 
     const listCategories = async({limit}) => {
         dispatch(fetchStartCategory())

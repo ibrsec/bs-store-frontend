@@ -1,9 +1,11 @@
-import React from 'react'
+ 
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import useAxios from './useAxios';
 import {fetchCurrentFailAuth, fetchCurrentSuccessAuth, fetchFailAuth, fetchLogoutAuth, fetchStartAuth, fetchSuccessAuth, fetchSuccessWithoutPayloadAuth} from '../app/features/authSlice'
 import { toastError, toastSuccess } from '../helpers/toastify';
+import { fetchLogoutCategory } from '../app/features/categorySlice';
+import { fetchLogoutProduct } from '../app/features/productSlice';
 const useAuthServices = () => {
 
     const dispatch = useDispatch();
@@ -54,6 +56,8 @@ const useAuthServices = () => {
                 throw new Error(response?.data?.message)
             }
             dispatch(fetchLogoutAuth())
+            dispatch(fetchLogoutCategory())
+            dispatch(fetchLogoutProduct())
             toastSuccess(response?.data?.message)
             navigate('/login');
         } catch (error) {

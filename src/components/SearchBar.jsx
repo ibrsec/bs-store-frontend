@@ -1,13 +1,12 @@
-import { useState } from "react";
+ 
 import TextField from "@mui/material/TextField";
 
 import SearchIcon from "@mui/icons-material/Search";
 import IconButton from "@mui/material/IconButton";
-import { Box } from "@mui/material";
-import useProductServices from "../services/useProductServices";
+import { Box } from "@mui/material"; 
 
 const SearchBar = ({searchQuery, setSearchQuery}) => {
-    const {listProducts} = useProductServices();
+    
 
   const handleChange = (e) => {
       setSearchQuery(e.target.value)

@@ -1,18 +1,15 @@
 
 
-
-import React from 'react'
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+ 
+import { useDispatch } from 'react-redux'; 
 import useAxios from './useAxios';
 import { fetchFailProduct, fetchStartProduct, fetchSuccessOneProduct, fetchSuccessProduct, fetchSuccessWithoutPayloadProduct } from '../app/features/productSlice';
 import { toastError, toastSuccess } from '../helpers/toastify';
 
 const useProductServices = () => {
 
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
-    const {axiosPublic,axiosToken} = useAxios();
+    const dispatch = useDispatch(); 
+    const { axiosToken} = useAxios();
 
     const listProducts = async({page,search}) => {
         dispatch(fetchStartProduct())

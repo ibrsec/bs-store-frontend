@@ -2,10 +2,7 @@
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-// import Link from '@mui/material/Link';
+import TextField from '@mui/material/TextField'; 
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -16,21 +13,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { toastWarn } from '../helpers/toastify';
 import useAuthServices from '../services/useAuthServices';
-
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
-// TODO remove, this demo shouldn't need to reset the theme.
+ 
 
 const defaultTheme = createTheme();
 
@@ -123,11 +106,6 @@ export default function RegisterPage() {
               Sign Up
             </Button>
             <Grid container>
-              <Grid item xs>
-                <a href="#" variant="body2">
-                  Forgot password?
-                </a>
-              </Grid>
               <Grid item>
                 <Link to="/login" variant="body2">
                   {"Do have an account? Sign In"}
@@ -135,8 +113,7 @@ export default function RegisterPage() {
               </Grid>
             </Grid>
           </Box>
-        </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
+        </Box> 
       </Container>
     </ThemeProvider>
   );

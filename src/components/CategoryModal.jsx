@@ -1,6 +1,4 @@
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box"; 
 import Modal from "@mui/material/Modal";
 import CategoryForm from "./CategoryForm";
 
@@ -21,8 +19,7 @@ export default function CategoryModal({
   setOpen,
   editItem,
   setEditItem,
-}) {
-  const handleOpen = () => setOpen(true);
+}) { 
   const handleClose = () => {
 
     setOpen(false);

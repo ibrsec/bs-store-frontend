@@ -1,7 +1,5 @@
 import { ToastContainer } from "react-toastify";
-import "./App.css";
-import AppBarComp from "./components/AppBarComp";
-import LoginPage from "./pages/LoginPage";
+import "./App.css"; 
 import AppRouter from "./routers/AppRouter";
 import { Provider } from "react-redux";
 import { persistor, store } from "./app/store";

@@ -1,4 +1,4 @@
-import * as React from "react";
+ 
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import ProductForm from "./ProductForm";
@@ -16,7 +16,7 @@ const style = {
 };
 
 export default function ProductModal({ open, setOpen, editItem, setEditItem }) {
-  const handleOpen = () => setOpen(true);
+   
   const handleClose = () => {
     setOpen(false);
     setEditItem({});

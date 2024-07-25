@@ -17,13 +17,14 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import { useSelector } from "react-redux";
 import {  useNavigate, useParams } from "react-router-dom"; 
 import useProductServices from "../services/useProductServices";
+import Spinner from "../components/Spinner";
  
 
 const ProductDetailPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { getProduct } = useProductServices();
-  const product = useSelector((state) => state.product.oneProduct);
+  const {oneProduct:product,loading} = useSelector((state) => state.product);
 
   useEffect(() => {
     getProduct(id);
@@ -52,6 +53,7 @@ const ProductDetailPage = () => {
   };
 
   return (
+    loading ? <Box display='flex' justifyContent={"center"} alignItems={'center'} gap={1} flexDirection={'column'}><Spinner /><Spinner /> <Spinner /></Box> :
     <Card sx={{ maxWidth: 1000, margin: "auto", my: 5, padding: "1rem" }}>
       <Box display={"flex"} flexWrap={"wrap"}>
         <CardMedia

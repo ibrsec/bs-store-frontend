@@ -1,17 +1,13 @@
-import axios from 'axios'
-import React from 'react'
+import axios from 'axios' 
 import { useSelector } from 'react-redux'
 
 const useAxios = () => {
 const token = useSelector(state => state.auth.token);
-    const axiosPublic = axios.create({
-        // baseURL: "http://localhost:1000",
+    const axiosPublic = axios.create({ 
         baseURL: process.env.REACT_APP_BASE_URL,
-        timeout: 10000,
-        // headers: {'Content-Type': 'application/json'}
+        timeout: 10000, 
     })
-    const axiosToken = axios.create({
-        // baseURL: "http://localhost:1000",
+    const axiosToken = axios.create({ 
         baseURL: process.env.REACT_APP_BASE_URL,
         timeout: 10000,
         headers: {'Authorization': 'Bearer ' +token}

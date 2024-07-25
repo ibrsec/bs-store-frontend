@@ -28,8 +28,8 @@ const ProductCard = ({ product }) => {
           <Typography gutterBottom variant="h6" component="h2" 
             sx={{
               display: "-webkit-box",
-              "-webkit-line-clamp": "1",
-              "-webkit-box-orient": "vertical",
+              WebkitLineClamp: "1",
+              WebkitBoxOrient: "vertical",
               overflow: "hidden",
             }}>
             {product?.title}
@@ -41,8 +41,8 @@ const ProductCard = ({ product }) => {
             mb={2}
             sx={{
               display: "-webkit-box",
-              "-webkit-line-clamp": "3",
-              "-webkit-box-orient": "vertical",
+              WebkitLineClamp: "3",
+              WebkitBoxOrient: "vertical",
               overflow: "hidden",
             }}
           >
