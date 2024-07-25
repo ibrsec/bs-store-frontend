@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { ToastContainer } from "react-toastify";
+import "./App.css";
+import AppBarComp from "./components/AppBarComp";
+import LoginPage from "./pages/LoginPage";
+import AppRouter from "./routers/AppRouter";
+import { Provider } from "react-redux";
+import { persistor, store } from "./app/store";
+import { PersistGate } from "redux-persist/integration/react";
 
-function App() {
+function App() { 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <AppRouter />
+        </PersistGate>
+      </Provider>
+      <ToastContainer />
     </div>
   );
 }
