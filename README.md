@@ -13,7 +13,7 @@
   <h3 align="center">BS Store FrontEnd | Fullstack</h3>
 
   <p align="center">
-    An awesome FullStack BS Store
+    An awesome frontend of the BS Store fullstack application
     <a href="https://github.com/ibrsec/bs-store-frontend"><strong>Explore the docs »</strong></a>
     <br />
     <br />
