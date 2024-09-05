@@ -69,7 +69,7 @@
 <a name="about-the-project"></a>
 ## ℹ️ About The Project
 
-[![bs-store-frontend](./public/project.gif)](https://bs-store-frontend-nextjs.vercel.app/)
+[![bs-store-frontend](./public/project.gif)](https://bs-store-frontend.vercel.app)
 
 
 
